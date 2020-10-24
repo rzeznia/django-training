@@ -19,3 +19,7 @@ def bmicalculator(weight, length):
 
 if __name__ == '__main__':
     bmicalculator(80, 1.79)
+
+class moj(dict):
+    def moja(self):
+        pass
