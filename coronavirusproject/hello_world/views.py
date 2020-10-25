@@ -7,16 +7,11 @@ def welcome(request):
 
 
 def warning(request):
-    return render("JEST KORONA! <strong>NIE MA PAPIRU!</strong>")
+    return render(request, "hello_world/warning.html")
 
 
 def about(request):
-    return HttpResponse(
-        """
-        <h2>Autorzy</h2>
-        <ul><li>Marcin Rzeźnik</li><li>Karol Sobisz</li></ul>
-        """
-    )
+    return render(request, "hello_world/about.html")
 
 
 def death(request):
