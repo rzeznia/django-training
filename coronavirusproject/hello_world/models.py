@@ -1,5 +1,5 @@
 from django.db import models
-
+from validators import validate_mass
 
 # Create your models here.
 class Person(models.Model):
@@ -10,8 +10,8 @@ class Person(models.Model):
     age = models.IntegerField()
     height = models.IntegerField()
     name = models.CharField(max_length=100)
-    mass = models.IntegerField()
-    sex = models.CharField(max_length=1, choices= sexs)
+    mass = models.IntegerField(validators=[validate_mass])
+    sex = models.CharField(max_length=6, choices= sexs)
     email = models.EmailField(blank=True, null=True)
     born_date = models.DateTimeField(auto_now=True, blank=True, null=True)
 

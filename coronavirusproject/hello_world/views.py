@@ -7,7 +7,7 @@ def welcome(request):
 
 
 def warning(request):
-    return HttpResponse("JEST KORONA! NIE MA PAPIRU!")
+    return render("JEST KORONA! <strong>NIE MA PAPIRU!</strong>")
 
 
 def about(request):
