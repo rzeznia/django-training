@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block title %}
+To jest death
+{% endblock %}
+
+{% block content %}
+<ul>
+    {% for person in time_of_death %}
+    <li>{{person.name}}</li>
+    {% endfor %}
+</ul>
+
+{% endblock %}
