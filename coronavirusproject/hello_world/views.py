@@ -23,8 +23,8 @@ def about(request):
 def time_of_death(request):
     persons = Person.objects.order_by("-mass")[:5]
     #text = person.name +  " umrzesz dokladnie o "
-    #godzina = datetime.datetime.now() + datetime.timedelta(days=10)
-    context = {"time_of_death": persons}
+    godzina = datetime.datetime.now() + datetime.timedelta(days=10)
+    context = {"time_of_death": godzina}
     return render(request, "hello_world/death.html", context)
 
 def cal_calculator(request):

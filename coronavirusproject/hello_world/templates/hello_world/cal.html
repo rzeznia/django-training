@@ -1,14 +1,28 @@
 {% extends "base.html" %}
 
 {% block title %}
-To jest death
+Kalkualtor
 {% endblock %}
 
 {% block content %}
-<ul>
-    {% for person in cal_calculator %}
-    {{person.cal}}
-    {% endfor %}
-</ul>
+    <table>
+        <thead>
+            <td>Name</td>
+            <td>Mass</td>
+            <td>Age</td>
+            <td>kCal</td>
+        </thead>
+        <tbody>
+            <tr>
+                {% for person in cal_calculator %}
+                <td>{{ person.name }}</td>
+                <td>{{ person.mass }}</td>
+                <td>{{ person.age }}</td>
+                <td>{{ person.cal }}</td>
+    
+                {% endfor %}
+            </tr>
+        </tbody>
+    
 
 {% endblock %}

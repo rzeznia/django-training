@@ -1,14 +1,11 @@
 {% extends "base.html" %}
 
 {% block title %}
-To jest death
+ŚMIERT!
 {% endblock %}
 
 {% block content %}
-<ul>
-    {% for person in time_of_death %}
-    <li>{{person.name}}</li>
-    {% endfor %}
-</ul>
+
+<h2>Umrzesz dokładnie o: {{ time_of_death }}</h2>
 
 {% endblock %}
