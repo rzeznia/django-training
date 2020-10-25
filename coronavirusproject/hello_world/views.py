@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from django.http import HttpResponse
+from .models import Person
 import datetime
 # Create your views here.
 def welcome(request):
@@ -15,7 +16,11 @@ def about(request):
 
 
 def death(request):
-    return HttpResponse(datetime.datetime.now() + datetime.timedelta(days=10))
+    person = Person.objects.get(pk=1)
+    persons = Person.objects.order_by("-mass")[:5]
+    godzina = datetime.datetime.now() + datetime.timedelta(days=10)
+    temp_dict = {"time_of_death":person}
+    return render(request, 'hello_world/death.html', temp_dict)
 
 
 #About -> Nasze imiona

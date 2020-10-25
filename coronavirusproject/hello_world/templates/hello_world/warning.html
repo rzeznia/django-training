@@ -1,12 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>To jest ostrzeżenie!</title>
-</head>
-<body>
-    <h1>To jest nagłówek</h1>
-    JEST KORONA! <strong>NIE MA PAPIRU!</strong>
-    <h2>To jest mniejszy nagłówek</h2>
-</body>
-</html>
+{% extends "base.html" %}
+
+{% block title %}
+To jest ostrzeżenie!
+{% endblock %}
+
+{% block content %}
+
+<h1>To jest nagłówek</h1>
+JEST KORONA! <strong>NIE MA PAPIRU!</strong>
+<h2>To jest mniejszy nagłówek</h2>
+
+{% endblock %}
